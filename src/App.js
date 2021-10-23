@@ -1,27 +1,22 @@
-import React from "react";
+//import React from "react";
 import ReactDOM from "react-dom";
-
-const Pet = (props) => {
-  return React.createElement("div", {}, [
-    React.createElement("h2", {}, `animal-${props.animal}`),
-    React.createElement("h2", {}, `animal-${props.animal}`),
-    React.createElement("h3", {}, `animal-${props.animal}`),
-  ]);
-};
-
-const x = 19;
+//import Pet from './Pet';
+//import Search from './SearchParams';
+//import CustomComopnent from "./CustomComponent";
+import Test from './Test'
 
 const App = () => {
-  return React.createElement(
-    "div",
-    {},
+      return(
+            <div>
+                  <h1>Adopt me!</h1>
+                  {/*<Pet animal="first" class="dfsdf"></Pet>
+                  <Pet animal="second"></Pet>
+                  <Pet animal="third"></Pet>*/}
+                  {/*<Search/>*/}
+                  <Test/>
+                  {/*<CustomComopnent name="reza"/>*/}
+            </div>
+      );
+}
 
-    React.createElement("h1", { id: "my-brand" }, "Adopt Me!"),
-    ...[1, 2, 3, 4].map((i) => React.createElement("h2", {}, i)),
-    React.createElement(Pet, { animal: "first" }),
-    React.createElement(Pet, { animal: "second" }),
-    React.createElement(Pet, { animal: "third" })
-  );
-};
-
-ReactDOM.render(React.createElement(App), document.getElementById("root"));
+ReactDOM.render(<App/>, document.getElementById("root"));
